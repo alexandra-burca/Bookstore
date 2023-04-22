@@ -10,7 +10,6 @@ A simple diagram displaying the main functions of the app offer for the users.
 ![bs5](https://user-images.githubusercontent.com/127431550/233774616-86f91dda-7cdd-469f-9080-aebbaf3bc1b4.png)
 
 
-
 ## Login & Register
 
 
