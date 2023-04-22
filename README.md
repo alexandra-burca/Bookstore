@@ -36,3 +36,12 @@ The store owner window has two pages, one for managing the products sold, and on
 
 By filling in the details and clicking Add, a new item will be added to the table of books. When selecting an entry from the table, the details will be replaced with that, which can be easily changed from Edit. At any point, the owner can export the table into a .xls file.
 
+## Use Case Diagram
+
+A simple diagram displaying the main functions of the app offer for the users.
+
+
+![bs5](https://user-images.githubusercontent.com/127431550/233774575-cf0bdef3-1e5d-499d-85cb-3739f57aa1b8.png)
+
+
+
