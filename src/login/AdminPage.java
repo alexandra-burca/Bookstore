@@ -75,7 +75,7 @@ public class AdminPage extends JFrame {
         panel.setBounds(0, 0, 934, 50);
         contentPane_1.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
@@ -88,7 +88,7 @@ public class AdminPage extends JFrame {
         panel_1.setBounds(0, 50, 934, 64);
         contentPane_1.add(panel_1);
 
-        JButton btnNewButton = new JButton("Editeaza produse");
+        JButton btnNewButton = new JButton("Edit products");
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Manage m = new Manage();
@@ -104,7 +104,7 @@ public class AdminPage extends JFrame {
         btnNewButton.setBounds(153, 11, 210, 41);
         panel_1.add(btnNewButton);
 
-        JButton btnVeziComenzile = new JButton("Vezi comenzile");
+        JButton btnVeziComenzile = new JButton("See orders");
         btnVeziComenzile.setForeground(Color.WHITE);
         btnVeziComenzile.setFont(new Font("Book Antiqua", Font.PLAIN, 20));
         btnVeziComenzile.setBackground(new Color(153, 51, 51));
@@ -116,12 +116,12 @@ public class AdminPage extends JFrame {
         lblNewLabel_1.setBounds(562, 194, 260, 287);
         contentPane_1.add(lblNewLabel_1);
 
-        JLabel lblNewLabel_2 = new JLabel("Administreaza libraria, produsele,");
+        JLabel lblNewLabel_2 = new JLabel("Administrate your store, products,");
         lblNewLabel_2.setFont(new Font("Book Antiqua", Font.PLAIN, 25));
         lblNewLabel_2.setBounds(69, 261, 387, 64);
         contentPane_1.add(lblNewLabel_2);
 
-        JLabel lblNewLabel_2_1 = new JLabel("utilizatorii si comenzile.");
+        JLabel lblNewLabel_2_1 = new JLabel("users and their orders.");
         lblNewLabel_2_1.setFont(new Font("Book Antiqua", Font.PLAIN, 25));
         lblNewLabel_2_1.setBounds(69, 302, 387, 64);
         contentPane_1.add(lblNewLabel_2_1);

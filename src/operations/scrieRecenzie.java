@@ -99,16 +99,16 @@ public class scrieRecenzie extends JFrame {
         panel.setBounds(0, 0, 934, 50);
         contentPane_1.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
-        lblNewLabel.setBounds(390, 10, 150, 30);
+        lblNewLabel.setBounds(390, 10, 160, 30);
         panel.add(lblNewLabel);
 
         JLabel lblNewLabel_2 = new JLabel("");
         lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Alexandra\\IdeaProjects\\Bookstore\\icons\\repository.png"));
-        lblNewLabel_2.setBounds(530, 10, 30, 30);
+        lblNewLabel_2.setBounds(550, 10, 30, 30);
         panel.add(lblNewLabel_2);
 
         JPanel panel_1 = new JPanel();
@@ -117,12 +117,12 @@ public class scrieRecenzie extends JFrame {
         panel_1.setBounds(0, 50, 934, 66);
         contentPane_1.add(panel_1);
 
-        JButton btnBrowse = new JButton("Vezi cartile");
+        JButton btnBrowse = new JButton("See books");
         btnBrowse.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 veziProduse v = new veziProduse();
                 dispose();
-                v.setTitle("Produse");
+                v.setTitle("Books");
                 v.setVisible(true);
                 v.setLocationRelativeTo(null);
             }
@@ -133,12 +133,12 @@ public class scrieRecenzie extends JFrame {
         btnBrowse.setBounds(45, 11, 180, 41);
         panel_1.add(btnBrowse);
 
-        JButton btnComanda = new JButton("Comanda");
+        JButton btnComanda = new JButton("Order");
         btnComanda.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Comanda c = new Comanda();
                 dispose();
-                c.setTitle("Produse");
+                c.setTitle("Order");
                 c.setVisible(true);
                 c.setLocationRelativeTo(null);
             }
@@ -149,12 +149,12 @@ public class scrieRecenzie extends JFrame {
         btnComanda.setBounds(265, 11, 180, 41);
         panel_1.add(btnComanda);
 
-        JButton btnVeziRecenziile = new JButton("Vezi recenziile");
+        JButton btnVeziRecenziile = new JButton("See reviews");
         btnVeziRecenziile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 veziRecenzii r = new veziRecenzii();
                 dispose();
-                r.setTitle("Scrie recenzie");
+                r.setTitle("See reviews");
                 r.setVisible(true);
                 r.setLocationRelativeTo(null);
             }
@@ -165,14 +165,14 @@ public class scrieRecenzie extends JFrame {
         btnVeziRecenziile.setBounds(486, 11, 180, 41);
         panel_1.add(btnVeziRecenziile);
 
-        JButton btnScrieORecenzie = new JButton("Scrie o recenzie");
+        JButton btnScrieORecenzie = new JButton("Write a review");
         btnScrieORecenzie.setForeground(Color.WHITE);
         btnScrieORecenzie.setFont(new Font("Book Antiqua", Font.PLAIN, 20));
         btnScrieORecenzie.setBackground(new Color(153, 51, 51));
         btnScrieORecenzie.setBounds(704, 11, 180, 41);
         panel_1.add(btnScrieORecenzie);
 
-        JLabel lblNewLabel_1 = new JLabel("ID Carte");
+        JLabel lblNewLabel_1 = new JLabel("Book ID");
         lblNewLabel_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1.setBounds(35, 155, 99, 30);
         contentPane_1.add(lblNewLabel_1);
@@ -200,19 +200,19 @@ public class scrieRecenzie extends JFrame {
         textRecenzie.setBounds(45, 259, 623, 257);
         contentPane_1.add(textRecenzie);
 
-        JLabel lblNewLabel_1_1_1 = new JLabel("Recenzia dumneavoastra:");
+        JLabel lblNewLabel_1_1_1 = new JLabel("Write your review:");
         lblNewLabel_1_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1_1.setBounds(35, 206, 290, 27);
         contentPane_1.add(lblNewLabel_1_1_1);
 
-        JButton btnTrimite = new JButton("Trimite");
+        JButton btnTrimite = new JButton("Send");
         btnTrimite.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Connection dbconn = DBConnection.connectDB();
                 PreparedStatement st = null;
                 try {
                     st = dbconn.prepareStatement("INSERT INTO `recenzii` (`username`, `bookID`, `rating`, `textrecenzie`) VALUES ('"+Login_Registration.currentUser+"','"+Integer.parseInt(textID.getText())+"', '"+Integer.parseInt((String) Rating.getSelectedItem())+"', '"+textRecenzie.getText()+"')");
-                    JOptionPane.showMessageDialog(null, "Recenzia a fost trimisa cu succes!", "Trimis",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Your review has been posted!", "Sent",JOptionPane.INFORMATION_MESSAGE);
                 } catch (SQLException e1) {
 
                     e1.printStackTrace();

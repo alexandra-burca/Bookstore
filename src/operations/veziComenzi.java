@@ -211,7 +211,7 @@ public class veziComenzi extends JFrame {
         panel.setBounds(0, 0, 934, 50);
         contentPane_1.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
@@ -240,14 +240,14 @@ public class veziComenzi extends JFrame {
         btnManage.setBounds(153, 11, 210, 41);
         panel_1.add(btnManage);
 
-        JButton btnVeziComenzile = new JButton("Vezi comenzile");
+        JButton btnVeziComenzile = new JButton("See reviews");
         btnVeziComenzile.setForeground(Color.WHITE);
         btnVeziComenzile.setFont(new Font("Book Antiqua", Font.PLAIN, 20));
         btnVeziComenzile.setBackground(new Color(153, 51, 51));
         btnVeziComenzile.setBounds(550, 11, 210, 41);
         panel_1.add(btnVeziComenzile);
 
-        JLabel lblNewLabel_1_1_1 = new JLabel("Useri");
+        JLabel lblNewLabel_1_1_1 = new JLabel("Users");
         lblNewLabel_1_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1_1.setBounds(23, 125, 81, 22);
         contentPane_1.add(lblNewLabel_1_1_1);
@@ -270,13 +270,13 @@ public class veziComenzi extends JFrame {
             }
         });
         model = new DefaultTableModel();
-        Object[] column = {"userID", "Nume", "Username", "Parola", "Telefon", "Adresa"};
+        Object[] column = {"userID", "Name", "Username", "Password", "Phone", "Adress"};
         model.setColumnIdentifiers(column);
         displayTable.setModel(model);
         scrollPane.setViewportView(displayTable);
 
 
-        JLabel lblNewLabel_1_1_1_1 = new JLabel("Comenzi");
+        JLabel lblNewLabel_1_1_1_1 = new JLabel("Orders");
         lblNewLabel_1_1_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1_1_1.setBounds(23, 289, 109, 22);
         contentPane_1.add(lblNewLabel_1_1_1_1);

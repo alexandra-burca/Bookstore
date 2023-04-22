@@ -142,16 +142,16 @@ public class veziProduse extends JFrame {
         panel.setBounds(0, 0, 934, 50);
         contentPane_1.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
-        lblNewLabel.setBounds(390, 10, 150, 30);
+        lblNewLabel.setBounds(390, 10, 160, 30);
         panel.add(lblNewLabel);
 
         JLabel lblNewLabel_2 = new JLabel("");
         lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Alexandra\\IdeaProjects\\Bookstore\\icons\\repository.png"));
-        lblNewLabel_2.setBounds(530, 10, 30, 30);
+        lblNewLabel_2.setBounds(550, 10, 30, 30);
         panel.add(lblNewLabel_2);
 
         JPanel panel_1 = new JPanel();
@@ -160,7 +160,7 @@ public class veziProduse extends JFrame {
         panel_1.setBounds(0, 50, 934, 66);
         contentPane_1.add(panel_1);
 
-        JButton btnBrowse = new JButton("Vezi cartile");
+        JButton btnBrowse = new JButton("See books");
         btnBrowse.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             }
@@ -172,12 +172,12 @@ public class veziProduse extends JFrame {
         panel_1.add(btnBrowse);
 
 
-        JButton btnComanda = new JButton("Comanda");
+        JButton btnComanda = new JButton("Order");
         btnComanda.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Comanda c = new Comanda();
                 dispose();
-                c.setTitle("Comanda");
+                c.setTitle("Order");
                 c.setVisible(true);
                 c.setLocationRelativeTo(null);
             }
@@ -188,12 +188,12 @@ public class veziProduse extends JFrame {
         btnComanda.setBounds(264, 11, 180, 41);
         panel_1.add(btnComanda);
 
-        JButton btnVeziRecenziile = new JButton("Vezi recenziile");
+        JButton btnVeziRecenziile = new JButton("See reviews");
         btnVeziRecenziile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 veziRecenzii r = new veziRecenzii();
                 dispose();
-                r.setTitle("Scrie recenzie");
+                r.setTitle("See reviews");
                 r.setVisible(true);
                 r.setLocationRelativeTo(null);
             }
@@ -204,12 +204,12 @@ public class veziProduse extends JFrame {
         btnVeziRecenziile.setBounds(485, 11, 180, 41);
         panel_1.add(btnVeziRecenziile);
 
-        JButton btnScrieORecenzie = new JButton("Scrie o recenzie");
+        JButton btnScrieORecenzie = new JButton("Write a review");
         btnScrieORecenzie.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 scrieRecenzie r = new scrieRecenzie();
                 dispose();
-                r.setTitle("Comanda");
+                r.setTitle("Write review");
                 r.setVisible(true);
                 r.setLocationRelativeTo(null);
             }
@@ -238,7 +238,7 @@ public class veziProduse extends JFrame {
             }
         });
         model = new DefaultTableModel();
-        Object[] column = {"ID", "Titlu", "Autor", "Nr bucati", "Pret"};
+        Object[] column = {"ID", "Title", "Author", "Quantity", "Price"};
         model.setColumnIdentifiers(column);
         table.setModel(model);
         scrollPane.setViewportView(table);
@@ -248,7 +248,7 @@ public class veziProduse extends JFrame {
         lblNewLabel_1.setBounds(760, 125, 100, 80);
         contentPane_1.add(lblNewLabel_1);
 
-        JLabel lblNewLabel_3 = new JLabel("Lista cartilor disponibile pentru comanda");
+        JLabel lblNewLabel_3 = new JLabel("List of books available to order");
         lblNewLabel_3.setFont(new Font("Book Antiqua", Font.PLAIN, 25));
         lblNewLabel_3.setBounds(46, 147, 491, 39);
         contentPane_1.add(lblNewLabel_3);

@@ -84,7 +84,7 @@ public class Register extends JFrame {
         panel.setBounds(0, 0, 584, 73);
         contentPane.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 40));
@@ -106,13 +106,13 @@ public class Register extends JFrame {
         lblNewLabel_2_2.setBounds(96, 0, 37, 30);
         panel_1.add(lblNewLabel_2_2);
 
-        JLabel lblNewLabel_1 = new JLabel("Creaza un cont nou");
+        JLabel lblNewLabel_1 = new JLabel("Create a new account");
         lblNewLabel_1.setForeground(new Color(160, 82, 45));
         lblNewLabel_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1.setBounds(21, 84, 209, 45);
         contentPane.add(lblNewLabel_1);
 
-        JLabel lblNewLabel_2 = new JLabel("Nume");
+        JLabel lblNewLabel_2 = new JLabel("Name");
         lblNewLabel_2.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
         lblNewLabel_2.setBounds(31, 129, 64, 33);
         contentPane.add(lblNewLabel_2);
@@ -151,12 +151,12 @@ public class Register extends JFrame {
         textTelefon.setBounds(388, 129, 172, 33);
         contentPane.add(textTelefon);
 
-        JLabel lblNewLabel_2_1 = new JLabel("Telefon");
+        JLabel lblNewLabel_2_1 = new JLabel("Phone");
         lblNewLabel_2_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
         lblNewLabel_2_1.setBounds(314, 129, 64, 33);
         contentPane.add(lblNewLabel_2_1);
 
-        JLabel lblNewLabel_3_1 = new JLabel("Adresa");
+        JLabel lblNewLabel_3_1 = new JLabel("Adress");
         lblNewLabel_3_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
         lblNewLabel_3_1.setBounds(314, 173, 95, 33);
         contentPane.add(lblNewLabel_3_1);
@@ -178,7 +178,7 @@ public class Register extends JFrame {
                 String adresa = textAdresa.getText();
 
                 if(name.isEmpty() || username.isEmpty() || password.isEmpty() || telefon.isEmpty() || adresa.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Completati toate campurile.", "Login Error",JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Please fill in the details.", "Login Error",JOptionPane.ERROR_MESSAGE);
                 }
                 else {
                     userRegister(name, username, password, telefon, adresa);

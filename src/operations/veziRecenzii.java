@@ -141,16 +141,16 @@ public class veziRecenzii extends JFrame {
         panel.setBounds(0, 0, 934, 50);
         contentPane_1.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
-        lblNewLabel.setBounds(390, 10, 150, 30);
+        lblNewLabel.setBounds(390, 10, 160, 30);
         panel.add(lblNewLabel);
 
         JLabel lblNewLabel_2 = new JLabel("");
         lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Alexandra\\IdeaProjects\\Bookstore\\icons\\repository.png"));
-        lblNewLabel_2.setBounds(530, 10, 30, 30);
+        lblNewLabel_2.setBounds(550, 10, 30, 30);
         panel.add(lblNewLabel_2);
 
         JPanel panel_1 = new JPanel();
@@ -159,12 +159,12 @@ public class veziRecenzii extends JFrame {
         panel_1.setBounds(0, 50, 934, 66);
         contentPane_1.add(panel_1);
 
-        JButton btnBrowse = new JButton("Vezi cartile");
+        JButton btnBrowse = new JButton("See books");
         btnBrowse.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 veziProduse v = new veziProduse();
                 dispose();
-                v.setTitle("Produse");
+                v.setTitle("Books");
                 v.setVisible(true);
                 v.setLocationRelativeTo(null);
             }
@@ -175,12 +175,12 @@ public class veziRecenzii extends JFrame {
         btnBrowse.setBounds(45, 11, 180, 41);
         panel_1.add(btnBrowse);
 
-        JButton btnComanda = new JButton("Comanda");
+        JButton btnComanda = new JButton("Order");
         btnComanda.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Comanda c = new Comanda();
                 dispose();
-                c.setTitle("Comanda");
+                c.setTitle("Order");
                 c.setVisible(true);
                 c.setLocationRelativeTo(null);
             }
@@ -191,20 +191,20 @@ public class veziRecenzii extends JFrame {
         btnComanda.setBounds(265, 11, 180, 41);
         panel_1.add(btnComanda);
 
-        JButton btnVeziRecenziile = new JButton("Vezi recenziile");
+        JButton btnVeziRecenziile = new JButton("See reviews");
         btnVeziRecenziile.setForeground(Color.WHITE);
         btnVeziRecenziile.setFont(new Font("Book Antiqua", Font.PLAIN, 20));
         btnVeziRecenziile.setBackground(new Color(153, 51, 51));
         btnVeziRecenziile.setBounds(486, 11, 180, 41);
         panel_1.add(btnVeziRecenziile);
 
-        JButton btnScrieORecenzie = new JButton("Scrie o recenzie");
+        JButton btnScrieORecenzie = new JButton("Write a review");
         btnScrieORecenzie.setPreferredSize(new Dimension(108, 24));
         btnScrieORecenzie.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 scrieRecenzie r = new scrieRecenzie();
                 dispose();
-                r.setTitle("Scrie recenzie");
+                r.setTitle("Write review");
                 r.setVisible(true);
                 r.setLocationRelativeTo(null);
             }
@@ -219,7 +219,7 @@ public class veziRecenzii extends JFrame {
         scrollPane.setBounds(81, 196, 776, 335);
         contentPane_1.add(scrollPane);
 
-        JLabel lblNewLabel_1_1_1 = new JLabel("Recenziile utilizatorilor");
+        JLabel lblNewLabel_1_1_1 = new JLabel("Reviews from other users");
         lblNewLabel_1_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1_1.setBounds(32, 141, 240, 30);
         contentPane_1.add(lblNewLabel_1_1_1);
@@ -238,7 +238,7 @@ public class veziRecenzii extends JFrame {
             }
         });
         model = new DefaultTableModel();
-        Object[] column = {"Username", "bookID", "Rating", "Text recenzie"};
+        Object[] column = {"Username", "bookID", "Rating", "Review"};
         model.setColumnIdentifiers(column);
         table.setModel(model);
         scrollPane.setViewportView(table);

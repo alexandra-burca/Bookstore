@@ -194,7 +194,7 @@ public class Manage extends JFrame {
         panel.setBounds(0, 0, 934, 50);
         contentPane_1.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
@@ -214,12 +214,12 @@ public class Manage extends JFrame {
         btnManage.setBounds(153, 11, 210, 41);
         panel_1.add(btnManage);
 
-        JButton btnVeziComenzile = new JButton("Vezi comenzile");
+        JButton btnVeziComenzile = new JButton("See orders");
         btnVeziComenzile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 veziComenzi v = new veziComenzi();
                 dispose();
-                v.setTitle("Comenzi");
+                v.setTitle("Orders");
                 v.setVisible(true);
                 v.setLocationRelativeTo(null);
             }
@@ -235,22 +235,22 @@ public class Manage extends JFrame {
         lblNewLabel_1.setBounds(56, 136, 37, 22);
         contentPane_1.add(lblNewLabel_1);
 
-        JLabel lblNewLabel_1_1 = new JLabel("Titlu");
+        JLabel lblNewLabel_1_1 = new JLabel("Title");
         lblNewLabel_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1.setBounds(56, 169, 64, 22);
         contentPane_1.add(lblNewLabel_1_1);
 
-        JLabel lblNewLabel_1_1_1 = new JLabel("Autor");
+        JLabel lblNewLabel_1_1_1 = new JLabel("Author");
         lblNewLabel_1_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1_1.setBounds(56, 205, 81, 22);
         contentPane_1.add(lblNewLabel_1_1_1);
 
-        JLabel lblNewLabel_1_1_2 = new JLabel("Nr. bucati");
+        JLabel lblNewLabel_1_1_2 = new JLabel("Quantity");
         lblNewLabel_1_1_2.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1_2.setBounds(475, 133, 110, 22);
         contentPane_1.add(lblNewLabel_1_1_2);
 
-        JLabel lblNewLabel_1_1_3 = new JLabel("Pret");
+        JLabel lblNewLabel_1_1_3 = new JLabel("Price");
         lblNewLabel_1_1_3.setFont(new Font("Baskerville Old Face", Font.PLAIN, 25));
         lblNewLabel_1_1_3.setBounds(497, 166, 64, 22);
         contentPane_1.add(lblNewLabel_1_1_3);
@@ -308,7 +308,7 @@ public class Manage extends JFrame {
             }
         });
         model = new DefaultTableModel();
-        Object[] column = {"ID", "Titlu", "Autor", "Nr bucati", "Pret"};
+        Object[] column = {"ID", "Title", "Author", "Quantity", "Price"};
         model.setColumnIdentifiers(column);
         displayTable.setModel(model);
         scrollPane.setViewportView(displayTable);

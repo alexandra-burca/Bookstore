@@ -219,16 +219,16 @@ public class Comanda extends JFrame {
         panel.setBounds(0, 0, 934, 50);
         contentPane_1.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
-        lblNewLabel.setBounds(390, 10, 150, 30);
+        lblNewLabel.setBounds(390, 10, 160, 30);
         panel.add(lblNewLabel);
 
         JLabel lblNewLabel_2 = new JLabel("");
         lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Alexandra\\IdeaProjects\\Bookstore\\icons\\repository.png"));
-        lblNewLabel_2.setBounds(530, 10, 30, 30);
+        lblNewLabel_2.setBounds(550, 10, 30, 30);
         panel.add(lblNewLabel_2);
 
         JPanel panel_1 = new JPanel();
@@ -237,12 +237,12 @@ public class Comanda extends JFrame {
         panel_1.setBounds(0, 50, 934, 66);
         contentPane_1.add(panel_1);
 
-        JButton btnBrowse = new JButton("Vezi cartile");
+        JButton btnBrowse = new JButton("See books");
         btnBrowse.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 veziProduse v = new veziProduse();
                 dispose();
-                v.setTitle("Produse");
+                v.setTitle("Books");
                 v.setVisible(true);
                 v.setLocationRelativeTo(null);
             }
@@ -253,19 +253,19 @@ public class Comanda extends JFrame {
         btnBrowse.setBounds(46, 11, 180, 41);
         panel_1.add(btnBrowse);
 
-        JButton btnComanda = new JButton("Comanda");
+        JButton btnComanda = new JButton("Order");
         btnComanda.setForeground(Color.WHITE);
         btnComanda.setFont(new Font("Book Antiqua", Font.PLAIN, 20));
         btnComanda.setBackground(new Color(153, 51, 51));
         btnComanda.setBounds(266, 11, 180, 41);
         panel_1.add(btnComanda);
 
-        JButton btnVeziRecenziile = new JButton("Vezi recenziile");
+        JButton btnVeziRecenziile = new JButton("See reviews");
         btnVeziRecenziile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 veziRecenzii r = new veziRecenzii();
                 dispose();
-                r.setTitle("Scrie recenzie");
+                r.setTitle("See reviews");
                 r.setVisible(true);
                 r.setLocationRelativeTo(null);
             }
@@ -276,12 +276,12 @@ public class Comanda extends JFrame {
         btnVeziRecenziile.setBounds(487, 11, 180, 41);
         panel_1.add(btnVeziRecenziile);
 
-        JButton btnScrieORecenzie = new JButton("Scrie o recenzie");
+        JButton btnScrieORecenzie = new JButton("Write a review");
         btnScrieORecenzie.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 scrieRecenzie s = new scrieRecenzie();
                 dispose();
-                s.setTitle("Produse");
+                s.setTitle("Write review");
                 s.setVisible(true);
                 s.setLocationRelativeTo(null);
             }
@@ -313,12 +313,12 @@ public class Comanda extends JFrame {
         lblNewLabel_1_1_1.setBounds(688, 156, 39, 22);
         contentPane_1.add(lblNewLabel_1_1_1);
 
-        JLabel lblNewLabel_1_1 = new JLabel("Titlu");
+        JLabel lblNewLabel_1_1 = new JLabel("Title");
         lblNewLabel_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
         lblNewLabel_1_1.setBounds(688, 195, 52, 22);
         contentPane_1.add(lblNewLabel_1_1);
 
-        JLabel lblNewLabel_1_1_2_1 = new JLabel("Pret");
+        JLabel lblNewLabel_1_1_2_1 = new JLabel("Price");
         lblNewLabel_1_1_2_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
         lblNewLabel_1_1_2_1.setBounds(688, 237, 52, 22);
         contentPane_1.add(lblNewLabel_1_1_2_1);
@@ -329,7 +329,7 @@ public class Comanda extends JFrame {
         textPret.setBounds(751, 228, 173, 28);
         contentPane_1.add(textPret);
 
-        JLabel lblNewLabel_1_1_2 = new JLabel("Nr. bucati");
+        JLabel lblNewLabel_1_1_2 = new JLabel("Quantity");
         lblNewLabel_1_1_2.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
         lblNewLabel_1_1_2.setBounds(663, 270, 88, 22);
         contentPane_1.add(lblNewLabel_1_1_2);
@@ -353,7 +353,7 @@ public class Comanda extends JFrame {
             }
         });
         model = new DefaultTableModel();
-        Object[] column = {"ID", "Titlu", "Autor", "Nr bucati", "Pret"};
+        Object[] column = {"ID", "Title", "Author", "Quanity", "Price"};
         model.setColumnIdentifiers(column);
         displayTable.setModel(model);
         scrollPane.setViewportView(displayTable);
@@ -375,7 +375,7 @@ public class Comanda extends JFrame {
         textCauta.setBounds(194, 136, 255, 28);
         contentPane_1.add(textCauta);
 
-        JLabel lblCautaDupaTitlu = new JLabel("Cauta dupa titlu");
+        JLabel lblCautaDupaTitlu = new JLabel("Search by title");
         lblCautaDupaTitlu.setForeground(new Color(139, 0, 0));
         lblCautaDupaTitlu.setHorizontalAlignment(SwingConstants.CENTER);
         lblCautaDupaTitlu.setFont(new Font("Book Antiqua", Font.PLAIN, 20));
@@ -388,20 +388,20 @@ public class Comanda extends JFrame {
         Factura.setBounds(20, 389, 633, 149);
         contentPane_1.add(Factura);
 
-        JButton btnAdauga = new JButton("Adauga");
+        JButton btnAdauga = new JButton("Add");
         btnAdauga.addActionListener(new ActionListener() {
             int i = 0;
             public void actionPerformed(ActionEvent e) {
 
                 if(textNrbucati.getText().isEmpty() || textTitlu.getText().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Selectati un produs si nr bucati.", "Error",JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Select a product and a quantity.", "Error",JOptionPane.ERROR_MESSAGE);
                 }
                 else {
                     Double PretTotal = (double) Math.round((Double.valueOf(textPret.getText().toString()) * Integer.valueOf(textNrbucati.getText()))*100)/100;
                     i++;
 
                     if(i==1) {
-                        Factura.setText(Factura.getText() + "\t------Comanda librarie------\n" + "\tID TITLU                      PRET   NR.BUCARI    TOTAL \n\t" + textId.getText() + " " + textTitlu.getText() + "        " + textPret.getText() + "        " + textNrbucati.getText() + "     " + PretTotal + "\n\t");
+                        Factura.setText(Factura.getText() + "\t------Book Store Order------\n" + "\tID TITLE                      PRICE   QUANTITY    TOTAL \n\t" + textId.getText() + " " + textTitlu.getText() + "        " + textPret.getText() + "        " + textNrbucati.getText() + "     " + PretTotal + "\n\t");
 
                     }
                     else {
@@ -420,7 +420,7 @@ public class Comanda extends JFrame {
         btnAdauga.setBounds(705, 313, 175, 41);
         contentPane_1.add(btnAdauga);
 
-        JButton btnTrimite = new JButton("Printeaza");
+        JButton btnTrimite = new JButton("Print");
         btnTrimite.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
@@ -445,11 +445,11 @@ public class Comanda extends JFrame {
         textId.setBounds(750, 150, 173, 28);
         contentPane_1.add(textId);
 
-        JButton btnTrimite_2 = new JButton("Trimite!");
+        JButton btnTrimite_2 = new JButton("Send!");
         btnTrimite_2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 InsertComanda();
-                JOptionPane.showMessageDialog(null, "Comanda a fost trimisa cu succes!", "Succes",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Your order has been sent!", "Success",JOptionPane.INFORMATION_MESSAGE);
             }
         });
         btnTrimite_2.setForeground(Color.WHITE);

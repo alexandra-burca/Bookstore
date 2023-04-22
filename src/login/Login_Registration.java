@@ -84,7 +84,7 @@ public class Login_Registration extends JFrame{
         frame.getContentPane().add(panel);
         panel.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("Librarie");
+        JLabel lblNewLabel = new JLabel("Book Store");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Baskerville Old Face", Font.PLAIN, 40));
@@ -188,7 +188,7 @@ public class Login_Registration extends JFrame{
                             JLabel display_current_user = new JLabel(currentUser);
                             u.getContentPane().add(display_current_user);
                             display_current_user.setFont(new Font("Baskerville Old Face", Font.PLAIN, 35));
-                            display_current_user.setBounds(270, 294, 193, 93);
+                            display_current_user.setBounds(310, 294, 193, 93);
 
 
 
